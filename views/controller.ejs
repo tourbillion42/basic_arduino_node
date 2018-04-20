@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("button").click(function() {
+        $.get("/controller/" + $(this).attr('id'), function(data, status) {});
+      });
+    });
+  </script>
+  <meta charset="UTF-8">
+  <title>아두이노 조명제어</title>
+</head>
+
+<body>
+  <div>
+    <h2>조명 제어</h2>
+    <button type="button" id='A'>ALL ON</button>
+    <button type="button" id='X'>ALL OFF</button>
+    <button type="button" id='1'>LED1</button>
+    <button type="button" id='2'>LED2</button>
+    <button type="button" id='3'>LED3</button>
+  </div>
+</body>
+
+</html>
